@@ -32,9 +32,9 @@ for bench in [S8, S8H, S9, S9H, S10, S11, LW11, P15, P17, P18, AMI33]
     else
         @assert issym(p)
     end
-    @show l = bench[:l]
-    @show N = length(l)
-    @show L = 2sum(l)
+    l = bench[:l]
+    N = length(l)
+    L = 2sum(l)
 
     @assert size(p,1) == size(p,2) == length(l)
 
