@@ -59,7 +59,7 @@ for bench in [S8, S8H, S9, S9H, S10, S11, LW11, P15, P17, P18, AMI33]
         end
 
         # @show LiftedHierarchies.sherali_adams!(LSmodel, 2)
-        @show LiftedHierarchies.lovasz_schrijver!(LSmodel)
+        LiftedHierarchies.lovasz_schrijver!(LSmodel)
         solvetime = @elapsed solve(LSmodel, relaxation=true)
 
         upper = get(UB, bench, NaN)
