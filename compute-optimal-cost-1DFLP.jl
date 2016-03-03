@@ -2,7 +2,7 @@ using FloorLayout, JuMP, CPLEX, Gurobi
 
 filename = split(splitdir(@__FILE__)[2], ".")[1] # pick up current file name, strip off directory and file postfix
 const fp = open(joinpath(pwd(),"$(filename).txt"), "w+")
-@show dir = splitdir(@__FILE__)[1]
+dir = splitdir(@__FILE__)[1]
 const fp = open(joinpath(dir,"results","$(filename).txt"), "w+")
 
 maxlevels = 5
